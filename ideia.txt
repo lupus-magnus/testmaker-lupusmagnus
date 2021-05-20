@@ -1,0 +1,88 @@
+##########################  O DESAFIO   ##########################
+
+Backend Developer Junior Challenge
+
+Nosso teste consiste em um cadastro de provas. Cada prova tem N questões e cada questão tem N alternativas, onde 1 ou mais alternativas são corretas.
+Pré-requisitos
+
+    Provas:
+        Campos:
+            Título
+        Tela de impressão da prova com todas as questões e alternativas.
+    Questões:
+        Campos:
+            Número da questão
+            Descrição
+    Alternativas:
+        Campos:
+            Texto
+            Alternativa correta?
+
+Stack
+
+    Javascript / Node.js
+    Frameworks a sua escolha.
+    Banco de dados a sua escolha.
+
+O que vamos avaliar?
+
+    Organização do projeto.
+    Padrões de desenvolvimento.
+
+Instruções
+
+    Desenvolva o projeto, seguindo os requisitos desse documento.
+    Vamos apreciar muito um README com o passo a passo para rodar o projeto.
+    Suba o seu projeto para o Github e libere acesso para os usuários rferro e jcbombardelli.
+
+########################## ESTRUTURA ##########################
+
+
+Basicamente: index (GET => Formulário para fazer prova e POST => Envia a prova para o banco de dados e retorna um componente de sucesso ou fracasso) e '/:_id' (GET =>
+Retorna a prova corrigida ou não)
+
+
+########################## Organização da Prova ##########################
+
+    //Uma prova genérica teria a aparência abaixo
+    {
+        id: 098139028831, <= Unix timestamp é uma boa maneira de controlar tudo
+        title: "P1: Organização das Indústrias",
+        testUrl: "http://gama-testmaker.com/098139028831",
+        testAnswersUrl: ""http://gama-testmaker.com/answers/098139028831",
+        
+        questions: [
+        
+        {
+            questionNumber: 1,
+            questionData: {
+                description: "Quem sabe mais sobre a cidade dos anjos?"
+                options: {
+                    a: {text: "Eu sou a alternativa a", value: true},
+                    b: {text: "Eu sou a alternativa b", value: false},
+                    c: {text: "Eu sou a alternativa c", value: false}
+                }
+            }
+        }
+
+        ]
+     
+
+    }
+
+
+
+
+########################## DIARIO DE BORDO ################################
+
+19/MAI/2021 - 02:18
+Consegui fazer rodar o back e front no mesmo app. Ainda preciso conferir se isso vai dar certo em produção. Falta também setar direitinho os .env da vida.
+
+Em meu último problema, parece que há questões de assincronismo no meu objeto. Ele está sendo mal gerado por conta disso, é necessário uma atenção especial à forma como é recebido e tratado o payload. Talvez envolver tudo numa promise seja a solução.
+
+
+19/MAI/2021 - 18:11
+Acho que está mais relacionado com os modelos do Mongo mesmo. Estou com o pensamento de deixar o modelamento de dados pra lá e só atuar mesmo diretamente nos documentos (sem modelo certinho).
+
+20/MAI/2021 - 00:48
+Consegui resolver o problema do modelamento sem abrir mão dele. Nesse momento acabo de conseguir fazer nossa primeira operação de sucesso com o MongoDB remoto. Estou feliz. Vou dar uma refatorada agora pra deixar num pseudo modelo MVC bonitinho.

@@ -1,0 +1,30 @@
+POST http://localhost:5000/exams/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "title" : "Prova de Matemática",
+    "questions" : [
+        {
+            "questionNumber" : 1,
+            "questionData" : {
+                "description" : "Quem sabe mais sobre a cidade dos anjos?",
+                "options" : {
+                    "a" : {"text" : "Eu sou a alternativa a", "value" : true},
+                    "b" : {"text" : "Eu sou a alternativa b", "value" : false},
+                    "c" : {"text" : "Eu sou a alternativa c", "value" : true}
+                }
+            }},
+        {
+            "questionNumber" : 2,
+            "questionData" : {
+                "description" : "Meu nome nao e Jhonny?",
+                "options" : {
+                    "a" : {"text" : "Eu sou a alternativa a", "value" : true},
+                    "b" : {"text" : "Eu sou a alternativa b", "value" : false},
+                    "c" : {"text" : "Eu sou a alternativa c", "value" : false}
+                }
+            }
+        }
+    ]
+
+}

@@ -1,0 +1,12 @@
+.formDiv {
+  background-color: #555;
+  width: 100%;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.previewSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
