@@ -86,3 +86,6 @@ Acho que está mais relacionado com os modelos do Mongo mesmo. Estou com o pensa
 
 20/MAI/2021 - 00:48
 Consegui resolver o problema do modelamento sem abrir mão dele. Nesse momento acabo de conseguir fazer nossa primeira operação de sucesso com o MongoDB remoto. Estou feliz. Vou dar uma refatorada agora pra deixar num pseudo modelo MVC bonitinho.
+
+20/MAI/2021 - 02:35
+Com a parte do backend resolvida e devidamente modularizada com arquitetura manuntenível, comecei a trabalhar no front. Fiz um template bonitinho para inserir o titulo da prova, agora falta trabalhar no form de questões. Mesmo assim, acho que vou primeiro trabalhar na pagina de display da prova, pra depois voltar nesse form. Parece o certo a se fazer.

@@ -20,14 +20,26 @@ class TestForm extends Component {
         {this.state.emptyTitle ? ( //Se ainda nao temos o titulo da prova:
           <div className={styles.formDiv}>
             <form>
-              <h1>{this.state.title}</h1>
-
               <p>Titulo da Prova:</p>
 
-              <input type="text" onChange={this.myChangeHandler} />
-              <button type="button" onClick={this.titleReadyHandler}>
-                ok
-              </button>
+              <div className={styles.inputField}>
+                <input
+                  onChange={(event) =>
+                    this.setState({ title: event.target.value })
+                  }
+                  placeholder={"Titulo da Prova"}
+                  className={styles.input}
+                />
+                <div
+                  onClick={() => {
+                    this.titleReadyHandler();
+                  }}
+                  className={styles.Btn}
+                >
+                  {" "}
+                  ok{" "}
+                </div>
+              </div>
             </form>
           </div>
         ) : (
