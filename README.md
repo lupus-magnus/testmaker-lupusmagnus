@@ -91,6 +91,10 @@ O projeto TestMakrr foi desenvolvido para suprir uma necessidade de automação 
 
 ## Como usar
 
+### Via Web:
+Na página inicial, basta adicionar o titulo da questão e enviar. Em seguida, adicione cada questão que desejar preenchendo o formulário e clicando em "Adicionar questão". Quando estiver satisfeito, basta clicar em "Pronto!". A aplicação o redirecionará para o link de sua prova formatada. Esse link pode ser usado depois, visto que essa prova ficou registrada em nosso banco de dados.
+
+### Localmente:
 Se você está rodando esse programa localmente, basta utilizar o comando `npm run dev`.
 
 A biblioteca concurrently se encarregará de abrir cada aplicação (o front e o back) em portas diferentes. Entretanto, ficarão faltando as variáveis de ambiente, que terei o prazer de passar por e-mail. Mas o projeto também está disponível somente como backend por meio [desta api](www.api.colocarei-aqui.com).
