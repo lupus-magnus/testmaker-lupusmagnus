@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styles from "./TestForm.module.css";
+import logo from "../../assets/imgs/lupus-logo.png";
 
 class TestForm extends Component {
   constructor(props) {
@@ -14,6 +15,12 @@ class TestForm extends Component {
     this.setState({ emptyTitle: false });
   };
 
+  onKeyDownHandler = (event) => {
+    if (event.keyCode === 13) {
+      this.titleReadyHandler();
+    }
+  };
+
   render() {
     return (
       <div className={styles.mainPage}>
@@ -24,6 +31,7 @@ class TestForm extends Component {
 
               <div className={styles.inputField}>
                 <input
+                  onKeyDown={this.onKeyDownHandler}
                   onChange={(event) =>
                     this.setState({ title: event.target.value })
                   }
@@ -52,6 +60,7 @@ class TestForm extends Component {
           {this.state.emptyTitle === false && <h1>{this.state.title}</h1>}
           {this.state.questions.length > 0 &&
             this.state.questions.map((item) => <p>{item}</p>)}
+          <img className={styles.logo} src={logo} alt="lupus-magnus logo" />
         </div>
       </div>
     );

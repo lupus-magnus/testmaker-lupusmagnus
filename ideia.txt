@@ -89,3 +89,13 @@ Consegui resolver o problema do modelamento sem abrir mão dele. Nesse momento a
 
 20/MAI/2021 - 02:35
 Com a parte do backend resolvida e devidamente modularizada com arquitetura manuntenível, comecei a trabalhar no front. Fiz um template bonitinho para inserir o titulo da prova, agora falta trabalhar no form de questões. Mesmo assim, acho que vou primeiro trabalhar na pagina de display da prova, pra depois voltar nesse form. Parece o certo a se fazer.
+
+20/MAI/2021 - 03:44
+É... Fomos bem longe hoje. Apesar de ter conseguido fazer o roteamento e a chamada para a api a partir do front, a tal da política referrer está me quebrando. Se tento passar o id por path do front, dá problema com ela e me bloqueiam. Se escondido da url e passado por outro lugar, até que dá certo, mas perde a graça do que eu queria fazer. Talvez então se eu fizer por cookies, salvar o idzinho num cookie e usá-lo pra fazer a requisição do banco de dados... Dessa forma o url seria fixo. Amanhã eu tento isso.
+
+21/MAI/2021 - 00:45
+Consegui resolver a questão do referrer. Na verdade nem era isso, eu mesmo que fiz uma besteira qualquer durante a desestruturação de um objeto que deu numa cadeia longa de errors. O que o cansaço não faz.
+De qualquer forma, hoje estou já vendo a formatação da prova recebida no front. Acredito que vai facilitar o trabalho no React se as opções de cada questão vierem dentro de uma lista, ao invés de um objeto. Não há necessidade e nem faz sentido que sejam um objeto.
+
+21/MAI/2021 - 10:25
+Hoje vou passar o dia nesse projeto. As metas mais urgentes são acertar o front do get exam e o formulário e lógica do form de questões. Vamo que vamo.

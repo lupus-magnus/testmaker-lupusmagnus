@@ -1,9 +1,8 @@
 const Exam = require("../models/exam.model");
+const { findExamById } = require("../services/operate-db");
 
 const examHandler = async (req, res) => {
-  await Exam.find({ _id: req.params.id })
-    .then((exam) => res.json(exam))
-    .catch((err) => res.status(400).json("Error: " + err));
+  await findExamById(req, res).catch((err) => console.log(err));
 };
 
 module.exports = examHandler;

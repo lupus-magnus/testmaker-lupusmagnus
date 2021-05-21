@@ -1,4 +1,5 @@
 const Exam = require("../models/exam.model");
+const { saveNewExam } = require("../services/operate-db");
 
 const addExamHandler = async (req, res) => {
   const { title, questions } = req.body;
@@ -8,21 +9,12 @@ const addExamHandler = async (req, res) => {
     _id: Number(newExamId),
     title,
     questions,
-    examUrl: `${process.env.BASE_URL_ADRESS}/${newExamId}`,
+    examUrl: `${process.env.BASE_URL_ADRESS}/exams/${newExamId}`,
   };
 
   console.log("newExamRegister:", newExamRegister);
 
-  const newExam = new Exam(newExamRegister);
-  await newExam
-    .save()
-    .then(() =>
-      res.json({
-        msg: "A prova foi adicionada ao nosso banco de dados!",
-        examUrl: newExamRegister.examUrl,
-      })
-    )
-    .catch((err) => res.status(400).json("Error: " + err));
+  await saveNewExam(newExamRegister, res);
 };
 
 module.exports = addExamHandler;
