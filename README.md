@@ -3,8 +3,10 @@
 </h1>
 
 <br>
+<h1 align="center">
+  <img align="center" src="https://cdn.dribbble.com/users/1857592/screenshots/3848396/character-typing.gif"/>  
+</h1>
 
-<img align="center" src="https://cdn.dribbble.com/users/1857592/screenshots/3848396/character-typing.gif"/>
 
 <br>
 
