@@ -4,7 +4,7 @@
 
 <br>
 
-<img src="https://hound-studio.com/wp-content/uploads/2018/10/gif_edu_2.gif"/>
+<img src="https://i.pinimg.com/originals/48/c7/40/48c740f5da1e7bc57d8c3bc855e1e850.gif"/>
 
 <br>
 
