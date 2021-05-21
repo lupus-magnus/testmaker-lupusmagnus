@@ -1,0 +1,27 @@
+body {
+  background: #555;
+}
+
+.examContainer {
+  font-family: "Times New Roman", Times, serif;
+  background: #fff;
+
+  width: 1240px; /* Essa é a largura de uma folha A4 */
+  height: 100%;
+  min-height: 100vh;
+
+  margin: 0 auto;
+  padding: 3rem 5rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.examContainer h1 {
+  align-self: center;
+  margin: 4rem auto;
+}
+
+.alternativesSection {
+  margin: 1rem auto;
+}

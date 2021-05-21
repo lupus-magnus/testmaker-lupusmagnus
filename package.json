@@ -8,10 +8,12 @@
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "cors": "^2.8.5",
     "dotenv": "^9.0.2",
     "express": "^4.16.2",
-    "mongoose": "^5.12.10"
+    "mongoose": "^5.12.10",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "concurrently": "^3.5.0",
