@@ -4,8 +4,7 @@
 
 <br>
 
-<img align="center" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6v9yPhmXsl52hWZZCz3anj112YOkBZlZKcGFR8DAORqyuaLdz_tKInHiG50KVgxZxKS4&usqp=CAU
-"/>
+<img align="center" src="https://cdn.dribbble.com/users/1857592/screenshots/3848396/character-typing.gif"/>
 
 <br>
 
