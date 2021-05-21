@@ -4,7 +4,8 @@
 
 <br>
 
-<img src="https://i.pinimg.com/originals/48/c7/40/48c740f5da1e7bc57d8c3bc855e1e850.gif"/>
+<img align="center" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6v9yPhmXsl52hWZZCz3anj112YOkBZlZKcGFR8DAORqyuaLdz_tKInHiG50KVgxZxKS4&usqp=CAU
+"/>
 
 <br>
 
