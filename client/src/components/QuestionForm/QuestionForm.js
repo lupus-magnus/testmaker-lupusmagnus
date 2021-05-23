@@ -4,11 +4,15 @@ import styles from "./QuestionForm.module.css";
 class QuestionForm extends Component {
   state = {
     activeQuestion: false,
+    questionNumber: 1,
     currentQuestion: "",
     currentAlternative: "",
     currentAlternativeIsCorrect: false,
     currentQuestionAlternatives: [],
     questions: [],
+
+    //Para enviar a prova!
+    exam: {},
   };
 
   questionAddedHandler = () => {
@@ -23,15 +27,22 @@ class QuestionForm extends Component {
     } = this.state;
 
     let questionList = this.state.questions;
-    questionList.push({ description, options });
-
-    console.log(
-      `description: ${description}\noptions:${options}\nstate questions: ${questionList}`
-    );
+    questionList.push({
+      questionNumber: this.state.questionNumber,
+      questionData: { description, options },
+    });
 
     console.log("questionList: ", questionList);
-    this.setState({ questions: questionList, activeQuestion: false });
-    console.log("Questão inteira adicionada!\n", this.state);
+    this.setState({
+      questions: questionList,
+      currentQuestionAlternatives: [],
+      activeQuestion: false,
+      questionNumber: this.state.questionNumber + 1,
+    });
+    console.log(
+      "Questão inteira adicionada!\nLista de questões:",
+      this.state.questions
+    );
   };
 
   alternativeAddedHandler = () => {
@@ -48,10 +59,18 @@ class QuestionForm extends Component {
     this.setState({
       currentQuestionAlternatives: currentAlternatives,
     });
-    console.log("Current State:\n", this.state);
+
     const inputs = Array.from(document.querySelectorAll("input"));
     inputs.forEach((input) => (input.value = ""));
     document.querySelector("#checkedCorrect").checked = false;
+  };
+
+  postExamHandler = () => {
+    const examReadyToSubmit = {
+      title: this.props.title,
+      questions: this.state.questions,
+    };
+    console.log(examReadyToSubmit);
   };
 
   render() {
@@ -125,7 +144,7 @@ class QuestionForm extends Component {
                 onClick={(e) => {
                   e.preventDefault();
                   console.log("clicou em finalizar prova!");
-                  //this.questionEndedHandler();
+                  this.postExamHandler();
                   e.target.value = "";
                 }}
               >
