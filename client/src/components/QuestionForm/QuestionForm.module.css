@@ -1,0 +1,33 @@
+.questionForm form {
+  display: grid;
+}
+
+.questionForm input[type="text"] {
+  height: 2rem;
+  margin-bottom: 0.5rem;
+  padding: 0 1rem;
+  letter-spacing: 2px;
+}
+
+.questionForm button {
+  margin: 0.5rem;
+  min-height: 2rem;
+  border-radius: 15px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: white;
+  transition: 0.3s;
+}
+
+.questionForm button:hover {
+  cursor: pointer;
+  filter: brightness(0.9);
+}
+
+.green {
+  background: #5cb85c;
+}
+
+.red {
+  background: #dc3545;
+}

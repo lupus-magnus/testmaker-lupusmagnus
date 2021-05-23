@@ -99,3 +99,9 @@ De qualquer forma, hoje estou já vendo a formatação da prova recebida no fron
 
 21/MAI/2021 - 10:25
 Hoje vou passar o dia nesse projeto. As metas mais urgentes são acertar o front do get exam e o formulário e lógica do form de questões. Vamo que vamo.
+
+22/MAI/2021 - 22:45
+Ainda não terminei o front. Na verdade, percebi que o trabalho que me dei com ele é bem maior do que a proposta inicial. Estava olhando novamente o meu back e estou satisfeito com ele, tô achando bem estruturado. A prova é só de back, mas eu quis tanto fazer uma solução completa... E agora tô preocupado se o enunciado está sendo bem satisfeito por mim. Espero que sim.
+
+23/MAI/2021 - 15:41
+Terminei toda a lógica de adicionar questão por questão. Falta fazer a lógica do Finalizar prova, que exige o envio da prova completa para o servidor. Acho que dá pra transferir o titulo da prova para o questionForm via props, e a partir daí já acabar com tudo lá dentro mesmo. Fazer um service externo da chamada post na api e Brasil acima de tudo. Depois disso vai estar tudo pronto de cabo a rabo, acho que cabe uma documentação do back no swagger se eu conseguir.
