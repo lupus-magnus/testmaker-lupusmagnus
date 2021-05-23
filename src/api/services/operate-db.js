@@ -12,6 +12,7 @@ const saveNewExam = async (newExamRegister, res) => {
     .save()
     .then(() =>
       res.json({
+        id: newExamRegister._id,
         msg: "A prova foi adicionada ao nosso banco de dados!",
         examUrl: newExamRegister.examUrl,
       })
