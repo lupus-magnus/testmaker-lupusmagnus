@@ -70,7 +70,7 @@ class TestForm extends Component {
         ) : (
           //Se ja temos o titulo da prova:
           <div className={styles.formDiv}>
-            <QuestionForm />
+            <QuestionForm title={this.state.title} />
           </div>
         )}
         <div className={styles.previewSection}>
