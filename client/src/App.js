@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { TestForm, Exam } from "./components";
+import { TestForm, Exam, ErrorPage } from "./components";
 import styles from "./App.module.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -28,6 +28,7 @@ class App extends Component {
         <div className={styles.app}>
           <Route path="/" exact component={TestForm} />
           <Route path="/exam/:id" component={Exam} />
+          <Route path="/error" component={ErrorPage} />
         </div>
       </Router>
     );

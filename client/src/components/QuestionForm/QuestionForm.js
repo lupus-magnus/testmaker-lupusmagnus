@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import styles from "./QuestionForm.module.css";
+import api from "../../services/api";
+import { Redirect } from "react-router-dom";
 
 class QuestionForm extends Component {
   state = {
@@ -10,6 +12,7 @@ class QuestionForm extends Component {
     currentAlternativeIsCorrect: false,
     currentQuestionAlternatives: [],
     questions: [],
+    redirect: null,
 
     //Para enviar a prova!
     exam: {},
@@ -65,15 +68,35 @@ class QuestionForm extends Component {
     document.querySelector("#checkedCorrect").checked = false;
   };
 
-  postExamHandler = () => {
-    const examReadyToSubmit = {
+  postExamHandler = async () => {
+    const examReadyToSubmitObject = {
       title: this.props.title,
       questions: this.state.questions,
     };
-    console.log(examReadyToSubmit);
+    console.log("examReadyToSubmit: ", examReadyToSubmitObject);
+    const examReadyToSubmitJSON = JSON.stringify(examReadyToSubmitObject);
+    console.log("Our exam in JSON: ", examReadyToSubmitJSON);
+    await api
+      .post("add", examReadyToSubmitObject)
+      .then(async (response) => {
+        //Redirecting:
+        const getExamRoute = await response.data.id;
+        if (response.data) {
+          console.log(response.data);
+          this.setState({ redirect: `/exam/${getExamRoute}` });
+        } else {
+          console.log("Algo de errado não está certo, amigo.");
+        }
+      })
+
+      .catch((err) => console.log(err));
+    console.log("Sucesso! Colocamos no banco de dados!");
   };
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect to={this.state.redirect} />;
+    }
     return (
       <div className={styles.questionForm}>
         <form>
@@ -130,7 +153,7 @@ class QuestionForm extends Component {
               <button
                 onClick={(e) => {
                   e.preventDefault();
-                  console.log("clicou em adicionar pergunta!");
+                  console.log("clicou em adicionar questão!");
                   this.questionAddedHandler();
                   e.target.value = "";
                 }}
