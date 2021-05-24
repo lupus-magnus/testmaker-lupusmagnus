@@ -20,8 +20,9 @@ Nessa versão, temos um MVP disponível onde você pode conferir e aprovar por s
 </p>
 
 ## 🌐 Live Version
+<p> Você pode acessar a versão em funcionamento bem aqui: </p>
 
-https://testmakrr.netlify.app/
+<a src="https://testmakrr.netlify.app/">📝 TestMakrr | Lupus Magnus</a>
 
 <br>
 
