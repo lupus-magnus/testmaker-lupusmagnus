@@ -81,16 +81,16 @@ class QuestionForm extends Component {
       .then(async (response) => {
         //Redirecting:
         const getExamRoute = await response.data.id;
-        if (response.data) {
-          console.log(response.data);
+        if (getExamRoute) {
+          console.log(getExamRoute);
+          console.log("Sucesso! Colocamos no banco de dados!");
           this.setState({ redirect: `/exam/${getExamRoute}` });
         } else {
-          console.log("Algo de errado não está certo, amigo.");
+          this.setState({ redirect: `/error` });
         }
       })
 
-      .catch((err) => console.log(err));
-    console.log("Sucesso! Colocamos no banco de dados!");
+      .catch((err) => this.setState({ redirect: `/error` }));
   };
 
   render() {
@@ -144,6 +144,7 @@ class QuestionForm extends Component {
           ) : (
             <React.Fragment>
               <input
+                autofocus="true"
                 type="text"
                 placeholder="Insira a pergunta desta questão"
                 onChange={(event) =>

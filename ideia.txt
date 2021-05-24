@@ -57,11 +57,11 @@ Retorna a prova corrigida ou não)
             questionNumber: 1,
             questionData: {
                 description: "Quem sabe mais sobre a cidade dos anjos?"
-                options: {
+                options: [
                     a: {text: "Eu sou a alternativa a", value: true},
                     b: {text: "Eu sou a alternativa b", value: false},
                     c: {text: "Eu sou a alternativa c", value: false}
-                }
+                ]
             }
         }
 

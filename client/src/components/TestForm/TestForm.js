@@ -48,6 +48,8 @@ class TestForm extends Component {
 
               <div className={styles.inputField}>
                 <input
+                  autofocus="true"
+                  required
                   onKeyDown={this.onKeyDownHandler}
                   onChange={(event) =>
                     this.setState({ title: event.target.value })
